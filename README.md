@@ -13,11 +13,13 @@ The project simulates an online liqour store where the buyer is able to:
 
 The project is majorly Backend Oriented with focus on:  
 
-* Creating Models with SQLALchemy  
+* Creating Models with SQLALchemy and Postgresql
 * Adding Users to Databases
+* Performing CRUD on the Databases to display on pages
 * Creating View Routes  
-* Creating Blueprints with flak
+* Creating Blueprints with flask
 * Authenticating and Authorizing users
+* Protecting Pages
 
 ## Improvements Needed
 
