@@ -1,0 +1,42 @@
+.body{
+    background-color: rgb(211, 211, 211);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.intro-content{
+    line-height: 2;
+}
+
+
+.form-titles{
+    background: linear-gradient(#3dd3f8, #9198e5);
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+
+.btn-primary:hover{
+    box-shadow: 10px 5px 10px 3px rgb(201, 199, 199);
+}
+.content-separator{
+    height: 2px;
+    border-top: 3px red solid;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.h1-don {
+    position: absolute;
+    top: 10%;
+    left:
+    50%;
+    transform:translate(-50%, -50%);
+}

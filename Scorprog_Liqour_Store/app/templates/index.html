@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container main-container">
+    <div class="row align-items-center justify-content-center h-100">
+        <div class="col-md-8 text-center intro-content">
+
+                <h1 class="mb-5 intro-header">Welcome to Scorprog Liquor Store </h1>
+                <p class="lead ">We offer a wide selection of premium <span class="products-offered">Gins, wines, beers and Whiskets</span> from around the world.
+                </p>
+                <hr class="content-separator">
+                <p>Whether you're looking for a special bottle of wine to celebrate a special occasion, or a unique
+                    craft beer to
+                    enjoy with friends, we have something for everyone.</p>
+                <hr class="content-separator">
+                <a class="btn btn-primary btn-sm mt-5" href="{{ url_for('main.home') }}" role="button">Browse Our Selection</a>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="h1-don">Scorprog Liquor Shop</h1>
+<div class="container main-container">
+    <div class="row justify-content-centre">
+        <div class="col mx-auto" style="max-width: 800px; width: auto;">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-4 form-titles">{% block title%} Log In {% endblock%}</h1>
+                    <hr class="my-4" style="border-top: 2px rgb(58, 57, 57) solid;">
+                    
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% for category, message in messages %}
+                    <div class="alert alert-danger" >
+                        {{ message }}
+                    </div>
+                    <script>
+                        setTimeout(() => {
+                            document.querySelector('.alert ').style.display = 'none';
+                        }, 2000);
+                    </script>
+                    {% endfor %}
+                    {% endwith %}
+                    <form action="{{ url_for ('auth.login') }}" method="POST">
+                        {{ form.csrf_token }}
+                        <div class="form-group mb-2">
+                            {{ form.email.label }}
+                            {{ form.email(class_='form-control', placeholder='Enter Email')}}
+                        </div>
+                        {% if form.email.errors %}
+                        {% for error in form.email.errors %}
+                        <div class="alert alert-danger">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+
+                        <div class="form-group mb-2">
+                            {{ form.password.label }}
+                            {{ form.password(class_='form-control', placeholder='Enter Password')}}
+                        </div>
+                        {% if form.password.errors %}
+                        {% for error in form.password.errors %}
+                        <div class="alert alert-danger">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+
+                        <div class="form-group mb-2">
+                            {{ form.remember.label }}
+                            {{ form.remember }}
+                        </div>
+                        {% if form.remember.errors %}
+                        {% for error in form.remember.errors %}
+                        <div class="alert alert-danger">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+
+                        <div class="form-group mb-2 ml-auto text-center">
+                            {{ form.submit(class_='btn btn-primary') }}
+                        </div>
+                        {% if form.submit.errors %}
+                        {% for error in form.submit.errors %}
+                        <div class="alert alert-danger">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
