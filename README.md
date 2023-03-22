@@ -1,19 +1,32 @@
 # alx-final_project
-## Scorprog Liquor Store
-This is my final WebStack Portfolio project for the ALX project
-### Project Details 
-The project is called Scorprog Liqour Store
-It simulates an online store where the useris able to:
-1: create an account
-2: log in
-3: access protected pages after log in
-The app also has add_product link page that only allows a user that is admin in database
+## Scorprog Liqour Store  
 
-### Improvements Needed
-<ol>
-<li> Add Javascript Code to handle Add to cart functionality</li>
-<li>Better UI.</li>
-<li> Add Stripe API for payments or Mpesa API</li>
-</ol>
-### Acknoledgments
-God(obvious) and the Great Team at ALX for the sponsorship and Training
+This is my final WebStack Portfolio project for the ALX project
+
+## Project Details 
+
+The project simulates an online liqour store where the buyer is able to:
+
+* Create an Account  
+* Log in
+* Access Protected Pages that require log in
+
+The project is majorly Backend Oriented with focus on:  
+
+* Creating Models with SQLALchemy  
+* Adding Users to Databases
+* Creating View Routes  
+* Creating Blueprints with flak
+* Authenticating and Authorizing users
+
+## Improvements Needed
+
+* Creating description pages for the products
+* Adding Javascript Code to handle an add cart functionality
+* Add Stripe Api/MPESA Api fot payments and checking out
+* Overally Better UI
+
+## Acknowledgements
+
+* Me (lol)
+* The Great Team at ALX for the sponsorship and Training
