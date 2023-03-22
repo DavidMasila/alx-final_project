@@ -30,3 +30,13 @@ The project is majorly Backend Oriented with focus on:
 
 * Me (lol)
 * The Great Team at ALX for the sponsorship and Training
+
+## ScreenShots
+
+![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/1.png)
+
+![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/2.png)
+
+![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/4.png)
+
+![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/5.png)
