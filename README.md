@@ -10,9 +10,10 @@ It simulates an online store where the useris able to:
 The app also has add_product link page that only allows a user that is admin in database
 
 ### Improvements Needed
-1. Add Javascript Code to handle Add to cart functionality
-2. Better UI.
-3. Add Stripe API for payments or Mpesa API
-
-###Acknoledgments
+<ol>
+<li> Add Javascript Code to handle Add to cart functionality</li>
+<li>Better UI.</li>
+<li> Add Stripe API for payments or Mpesa API</li>
+</ol>
+### Acknoledgments
 God(obvious) and the Great Team at ALX for the sponsorship and Training
