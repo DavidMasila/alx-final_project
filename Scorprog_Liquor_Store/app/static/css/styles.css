@@ -1,7 +1,16 @@
-.body{
-    background-color: rgb(211, 211, 211);
-    font-family: Arial, Helvetica, sans-serif;
-
+body{
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    color: rgb(224, 24, 17);
+}
+.card{
+    color: black;
+}
+.main-col{
+    background-color: white;
+    padding: 19px 5px;
+    box-shadow: 5px 6px 9px rgb(109, 80, 6);
+    color: black;
 }
 .main-container {
     position: absolute;
@@ -36,7 +45,6 @@
 .h1-don {
     position: absolute;
     top: 10%;
-    left:
-    50%;
+    left: 50%;
     transform:translate(-50%, -50%);
 }

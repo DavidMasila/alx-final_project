@@ -10,6 +10,8 @@
                     {% for item in pagination.items %}
                     <div class="card-group">
                         <div class="card mb-4">
+                            <img height="200px" width="100px" src="{{ url_for('static', filename='img/logo.jpg')}}"
+                                class="card-img-top" alt="Scorprog Logo">
                             <div class="card-body">
                                 <h5 class="card-title">{{ item.name }} | {{ item.type.capitalize() }}</h5>
                                 <hr>
