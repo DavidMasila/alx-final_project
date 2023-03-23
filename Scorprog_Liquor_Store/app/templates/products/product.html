@@ -9,10 +9,11 @@
                     <h6 style="margin-bottom: 20px;">We have the following drinks for you</h4>
                     <div class="card-group">
                         <div class="card mb-4">
+                            <img height="200px" width="100px" src="{{ url_for('static', filename='img/logo.jpg')}}" class="card-img-top" alt="Scorprog Logo">
                             <div class="card-body">
                                 <h5 class="card-title">{{ item.name }}</h5>
                                 <hr>
-                                <p style="background-color: rgb(235, 233, 233);" class="card-text">{{ item.description
+                                <p style="background-color: rgb(235, 233, 233);" class="card-text img-fluid">{{ item.description
                                     }}</p>
                                 <div class="card-footer" style="bottom: 2px;">
                                     <span>Ksh:{{ item.price }} Only</span>
