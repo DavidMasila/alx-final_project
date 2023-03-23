@@ -10,6 +10,7 @@ The project simulates an online liqour store where the buyer is able to:
 * Create an Account  
 * Log in
 * Access Protected Pages that require log in  
+* Contact representatives by use of zoho sales IQ
 
 The shop owner is also able to access a protected route that enables them to add products
 
