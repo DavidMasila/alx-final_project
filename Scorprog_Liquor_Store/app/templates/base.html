@@ -27,20 +27,26 @@
                     </li>
                     {% if current_user.is_admin %}
                     <li class="nav-item ">
-                        <a class="nav-link active" aria-current="page" href="{{ url_for('auth.add_product' )}}">Add Products</a>
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('auth.add_product' )}}">Add
+                            Products</a>
                     </li>
                     {% endif %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Liquors
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Liquors
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="{{ url_for('main.drink_type', liquor_type = 'whiskey') }}">Whiskeys</a></li>
-                          <li><a class="dropdown-item" href="{{ url_for('main.drink_type', liquor_type = 'gin') }}">Gins</a></li>
-                          <li><a class="dropdown-item" href="{{ url_for('main.drink_type', liquor_type = 'wine') }}">Wines</a></li>
-                          <li><a class="dropdown-item" href="{{ url_for('main.drink_type', liquor_type = 'beer') }}">Beers</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{{ url_for('main.drink_type', liquor_type = 'whiskey') }}">Whiskeys</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{{ url_for('main.drink_type', liquor_type = 'gin') }}">Gins</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{{ url_for('main.drink_type', liquor_type = 'wine') }}">Wines</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{{ url_for('main.drink_type', liquor_type = 'beer') }}">Beers</a></li>
                         </ul>
-                      </li>
+                    </li>
                     {% endif %}
                 </ul>
                 <ul class="navbar-nav mb-2 mb-lg-0  ms-auto">
@@ -67,7 +73,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-
+    <script type="text/javascript"
+        id="zsiqchat">var $zoho = $zoho || {}; $zoho.salesiq = $zoho.salesiq || { widgetcode: "8c04b852698618506985299b82e9fc7b1d057524dd363ecfec340bb2ef5f891216ffd1e2b4ec8aa617132f801bedfba5", values: {}, ready: function () { } }; var d = document; s = d.createElement("script"); s.type = "text/javascript"; s.id = "zsiqscript"; s.defer = true; s.src = "https://salesiq.zoho.com/widget"; t = d.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t);</script>
     {% endblock %}
 </body>
 
