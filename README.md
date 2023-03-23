@@ -9,7 +9,9 @@ The project simulates an online liqour store where the buyer is able to:
 
 * Create an Account  
 * Log in
-* Access Protected Pages that require log in
+* Access Protected Pages that require log in  
+
+The shop owner is also able to access a protected route that enables them to add products
 
 The project is majorly Backend Oriented with focus on:  
 
@@ -20,6 +22,7 @@ The project is majorly Backend Oriented with focus on:
 * Creating Blueprints with flask
 * Authenticating and Authorizing users
 * Protecting Pages
+* Paginating pages
 
 ## Improvements Needed
 
@@ -39,6 +42,6 @@ The project is majorly Backend Oriented with focus on:
 
 ![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/2.png)
 
-![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/4.png)
+![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/3.png)
 
-![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/5.png)
+![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/4.png)

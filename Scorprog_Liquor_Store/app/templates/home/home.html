@@ -7,22 +7,54 @@
             <h6 style="margin-bottom: 20px;">We have the following drinks for you</h4>
                 <hr>
                 <div class="row">
-                    {% for drink in drink_types %}
-                    <div class="col-sm-6 col-lg-4">
+                    {% for item in pagination.items %}
+                    <div class="card-group">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <h5 class="card-title">{{ drink.name }}</h5>
+                                <h5 class="card-title">{{ item.name }} | {{ item.type.capitalize() }}</h5>
                                 <hr>
-                                <p style="background-color: rgb(235, 233, 233);" class="card-text">{{ drink.description }}</p>
-                                <div class="card-footer">Ksh:{{ drink.price }} Only</div>
-                                <a href="#" class="btn btn-primary btn-sm">Check it out</a>
+                                <p style="background-color: rgb(235, 233, 233);" class="card-text">{{ item.description
+                                    }}</p>
+                                <div class="card-footer" style="bottom: 2px;">
+                                    <span>Ksh:{{ item.price }} Only</span>
+                                    <br>
+                                    <a href="#" class="btn btn-primary btn-sm">Check it out</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     {% endfor %}
                 </div>
+                <div class="pagination pagination-sm justify-content-center">
+                    {% if pagination.has_prev %}
+                    <span>
+                        <a class="page-link" href="{{ url_for('main.home', page=pagination.prev_num) }}">&laquo;</a>
+                    </span>
+                    {% else %}
+                    <span class="page-item disbled">
+                        <a class="page-link">&laquo;</a>
+                    </span>
+                    {% endif %}
+                    {% for number in pagination.iter_pages() %}
+                    {% if pagination.page != number %}
+                    <span>
+                        <a class="page-link" href="{{ url_for('main.home', page=number) }}">{{ number }}</a>
+                    </span>
+                    {% else %}
+                    <span class="page-link page-item active">{{ number }}</span>
+                    {% endif %}
+                    {% endfor %}
+                    {% if pagination.has_next %}
+                    <span>
+                        <a class="page-link" href="{{ url_for('main.home', page=pagination.next_num) }}">&raquo;</a>
+                    </span>
+                    {% else %}
+                    <span class="page-item disbled">
+                        <a class="page-link">&raquo;</a>
+                    </span>
+                    {% endif %}
+                </div>
         </div>
     </div>
 </div>
-
 {% endblock %}

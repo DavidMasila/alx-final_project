@@ -35,10 +35,10 @@
                           Liquors
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Whiskeys</a></li>
-                          <li><a class="dropdown-item" href="#">Gins</a></li>
-                          <li><a class="dropdown-item" href="#">Wines</a></li>
-                          <li><a class="dropdown-item" href="#">Beers</a></li>
+                          <li><a class="dropdown-item" href="{{ url_for('main.drink_type', liquor_type = 'whiskey') }}">Whiskeys</a></li>
+                          <li><a class="dropdown-item" href="{{ url_for('main.drink_type', liquor_type = 'gin') }}">Gins</a></li>
+                          <li><a class="dropdown-item" href="{{ url_for('main.drink_type', liquor_type = 'wine') }}">Wines</a></li>
+                          <li><a class="dropdown-item" href="{{ url_for('main.drink_type', liquor_type = 'beer') }}">Beers</a></li>
                         </ul>
                       </li>
                     {% endif %}
