@@ -24,7 +24,7 @@
                         {{ form.csrf_token }}
                         <div class="form-group mb-2">
                             {{ form.firstname.label }}
-                            {{ form.firstname(class_='form-control', placeholder='Enter Email')}}
+                            {{ form.firstname(class_='form-control', placeholder='Enter Firstname')}}
                         </div>
                         {% if form.firstname.errors %}
                         {% for error in form.firstname.errors %}
@@ -36,7 +36,7 @@
 
                         <div class="form-group mb-2">
                             {{ form.lastname.label }}
-                            {{ form.lastname(class_='form-control', placeholder='Enter Email')}}
+                            {{ form.lastname(class_='form-control', placeholder='Enter Lastname')}}
                         </div>
                         {% if form.lastname.errors %}
                         {% for error in form.lastname.errors %}

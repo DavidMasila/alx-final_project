@@ -1,11 +1,12 @@
-from flask import Blueprint, render_template, redirect, url_for, request, flash
+from flask import Blueprint, render_template, redirect, url_for, request, flash, current_app
 from app.forms.authentication import Signupform, LoginForm
 from app.forms.add_product import Liquor
 from app.models.users import Client
 from app.models.drinks import Products
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask_login import login_user, current_user, login_required, logout_user
-from extensions import db
+from extensions import db, admin_permission, admin_role
+from flask_principal import Identity, identity_changed, AnonymousIdentity
 
 
 auth = Blueprint('auth', __name__)
@@ -46,12 +47,18 @@ def login():
             flash("Please check your log in credentials",'danger')
             return redirect(url_for('auth.login'))
         else:
+            #get the identity of the user
+            identity = Identity(client.id)
+            #notify app of the change in identity
+            identity_changed.send(current_app._get_current_object(), identity=identity)
+            #log in user
             login_user(client, remember=remember)
             return redirect(url_for('main.home'))
     return render_template('authentication/login.html', form=form)
 
 @auth.route("/add_product", methods = ['GET','POST'])
 @login_required
+@admin_permission.require()
 def add_product():
     form = Liquor()
     if form.validate_on_submit():
@@ -69,5 +76,6 @@ def add_product():
 @auth.route("/logout")
 @login_required
 def logout():
+    identity_changed.send(current_app._get_current_object(), identity=AnonymousIdentity())
     logout_user()
     return redirect(url_for('main.index'))
