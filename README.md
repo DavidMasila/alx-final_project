@@ -39,7 +39,7 @@ The project is majorly Backend Oriented with focus on:
 
 ## ScreenShots
 
-![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/1.png)
+![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/1.png) 
 
 ![alt text](https://github.com/DavidMasila/alx-final_project/blob/master/2.png)
 
